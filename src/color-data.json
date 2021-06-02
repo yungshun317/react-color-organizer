@@ -1,0 +1,32 @@
+[
+  {
+    "id": "19d0afbb-f329-45f7-9479-9b5a7362c5df",
+    "title": "dark blue",
+    "color": "#0d2e41",
+    "rating": 0
+  },
+  {
+    "id": "6b1561c8-73a7-4eda-9263-31c76de5108c",
+    "title": "light blue",
+    "color": "#00798a",
+    "rating": 0
+  },
+  {
+    "id": "0175d1f0-a8c6-41bf-8d02-df5734d829a4",
+    "title": "teal",
+    "color": "#44ad9f",
+    "rating": 5
+  },
+  {
+    "id": "83c7ba2f-7392-4d7d-9e23-35adbe186046",
+    "title": "light orange",
+    "color": "#f8af2c",
+    "rating": 3
+  },
+  {
+    "id": "a11e3995-b0bd-4d58-8c48-5e49ae7f7f23",
+    "title": "dark orange",
+    "color": "#fa6135",
+    "rating": 0
+  }
+]
