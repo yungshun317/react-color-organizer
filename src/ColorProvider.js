@@ -1,10 +1,14 @@
-import React, { useContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
+import { v4 } from "uuid";
 
 import colorData from "./color-data.json";
 
 const ColorContext = createContext();
 
-// [9]
+// [10] Create `useColors` hook with context
+export const useColors = () => useContext(ColorContext);
+
+// [9] Render `ColorContext.Provider`
 export default function ColorProvider({ children }) {
 	const [colors, setColors] = useState(colorData);
 
@@ -27,8 +31,9 @@ export default function ColorProvider({ children }) {
         );
 
 	return (
-		<ColorContext.Provider value={{ colors, addColor, removeColor, setColors, rateColor }}>
+		<ColorContext.Provider value={{ colors, addColor, removeColor, rateColor }}>
 		    { children }
 		</ColorContext.Provider>
 	);
 }
+

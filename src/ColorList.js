@@ -1,14 +1,16 @@
 import React, { useContext } from "react";
 
 import Color from "./Color";
-import { ColorContext } from "./";
+import { useColors } from "./ColorProvider";
 
 // [2] `colors` are passed down from `App`
 export default function ColorList() {
-	const { colors } = useContext(ColorContext);
+	const { colors } = useColors();
+
 	if (!colors.length) return <div>No Colors Listed. (Add a Color)</div>;
+
 	return (
-	    <div className="color-list">
+	    <div>
 	        {
 	        	colors.map(color => 
 	        	    <Color 
