@@ -5,9 +5,12 @@ import AddColorForm from "./AddColorForm";
 // [1] `App`will be the only component that holds state 
 export default function App() {
 	return (
-		<>
+		<ColorProvider>
 		    <AddColorForm />
-		    <ColorList />
-	    </>
+		    <Routes>
+		        <Route path="/" element={<ColorList />} />
+		        <Route path=":id" element={<ColorDetails />} /> 
+		    </Routes>
+	    </ColorProvider>
 	);
 }
