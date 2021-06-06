@@ -12,7 +12,15 @@ export function ColorDetails() {
 	console.log(foundColor);
 	return (
 		<div>
-		    <h1>Details</h1>
+		    <div 
+		        style={{
+		        	backgroundColor: foundColor.color,
+		        	height: 100,
+		        	width: 100
+		        }}
+		    ></div>
+		    <h1>{foundColor.title}</h1>
+		    <h1>{foundColor.color}</h1>
 		</div>
 	);
 }
