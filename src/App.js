@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 
 import ColorProvider from "./ColorProvider";
 import ColorList from "./ColorList";
@@ -12,7 +12,7 @@ export default function App() {
 		<ColorProvider>
 		    <AddColorForm />
 		    <Switch>
-		        <Route path="/">
+		        <Route exact path="/">
 		            <ColorList />
 		        </Route>
 		        <Route path="/:id">

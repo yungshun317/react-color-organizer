@@ -3,12 +3,13 @@ import { useParams } from "react-router-dom";
 
 import { useColors } from "./ColorProvider";
 
-export function ColorDetails() {
+// [11] Display the data dynamically
+export default function ColorDetails() {
 	// let params = useParams();
 	// console.log(params);
-	let { id } = useParams();
-	let { colors } = useColors();
-    let foundColor = colors.find(color => color.id === id);
+	const { id } = useParams();
+	const { colors } = useColors();
+    const foundColor = colors.find(color => color.id === id);
 	console.log(foundColor);
 	return (
 		<div>

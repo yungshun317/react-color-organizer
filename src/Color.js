@@ -1,10 +1,11 @@
 import React from "react";
 import { FaTrash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import StarRating from "./StarRating";
 import { useColors } from "./ColorProvider";
 
-// [3] `rating` is passed down to `StarRating`
+// [3] `rating` is passed down to `StarRating
 export default function Color({ 
 	id, 
 	title, 
@@ -13,8 +14,8 @@ export default function Color({
 }) {
 	const { rateColor, removeColor } = useColors();
 	return (
-		<section>
-		    <h1>{title}</h1>
+		<section className="color">
+		    <h1><Link to={`/${id}`}>{title}</Link></h1>
 		    <button onClick={() => removeColor(id)}>
 		        <FaTrash />
 		    </button>
